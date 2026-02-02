@@ -1,0 +1,122 @@
+/* الشكل العام للـ navbar */
+.navbar {
+  background: black;
+  color: white;
+  padding: 15px 40px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* الروابط */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #00e6b8; /* لون أخضر فاتح عند الـ hover */
+}
+
+/* -------- Dropdown -------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown > a {
+  cursor: pointer;
+}
+
+/* القائمة الأساسية */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  list-style: none;       /* 👈 يشيل النقط */
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+  display: none;          /* 👈 يختفي افتراضياً */
+}
+
+/* إظهار القائمة عند فتحها */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* عناصر القائمة */
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background: #f3f3f3;
+}
+
+/* -------- Submenu -------- */
+.submenu-parent {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: white;
+  list-style: none;       /* 👈 يشيل النقط */
+  padding: 10px 0;
+  margin: 0;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: none;
+}
+
+.submenu-parent:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 8px 15px;
+}
+
+.submenu li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li:hover {
+  background: #f3f3f3;
+}
+
+/* السهم الصغير */
+.arrow {
+  font-size: 10px;
+  margin-left: 4px;
+}
